@@ -83,6 +83,7 @@ func Sender(channel chan messages.DealMessage) {
 
 			lastTimestamp = int32(time.Now().Unix())
 			counter = 0
+			messagePool = make(map[string][]messages.DealMessage)
 		}
 	}
 }
